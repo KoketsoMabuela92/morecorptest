@@ -19,10 +19,8 @@ class ProductsBids extends Migration
                     function (Blueprint $table) {
                         $table->integer('id')->autoIncrement();
                         $table->integer('productId');
-                        $table->float('highestBid')->default(0.00);
-                        $table->float('lowestBid')->default(0.00);
-                        $table->float('averageBid')->default(0.00);
-                        $table->integer('bidCount')->default(0);
+                        $table->string('userEmail')->notnull();
+                        $table->float('bidPrice')->notnull();
                         $table->timestamps();
                         $table->foreign('productId')->references('id')->on('products');
                     }

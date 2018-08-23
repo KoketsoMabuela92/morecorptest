@@ -26,6 +26,9 @@ class Products extends Migration
                         $table->string('fullPath');
                         $table->string('mimeType');
                         $table->integer('viewCount')->default(0);
+                        $table->float('highestBid')->default(0.00);
+                        $table->float('lowestBid')->default(0.00);
+                        $table->integer('bidCount')->default(0);
                         $table->timestamps();
                     }
                 );
