@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProductsController@showProducts');
+Route::get('/view/{productId}', 'ProductsController@viewProduct');
+Route::get('/bid/{productId}', 'ProductsController@bidProduct');
+Route::post('/place-bid', 'ProductsController@placeBid');
