@@ -136,6 +136,7 @@
                 </div>
 
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="product_id" value="{{ $product[0]['id'] }}">
 
                 <button type="submit" class="btn btn-primary btn-sm m-t-10">Submit bid</button>
             </form>
